@@ -1,5 +1,29 @@
-# Blackjack
+# **Blackjack!**
+
+## Date: 7/1/2022
+
+## _By: Jackson McHugh_
+
+[Linkedin](https://www.linkedin.com/in/jackson-mchugh-a12668239/) [Github](https://github.com/Jacksonmchugh/Blackjack)
+
+---
 
 #### Blackjack! Closest to 21 with out going over wins!
 
-###### Press Draw to start the game.
+#### A game against the computer. Press Draw to start the game. You will compete against the dealer. Draw cards and try to get to 21 with out going over. Win 5 hands to win the game. This game will be written in HTML, CSS, and JS.
+
+## Trello Board
+
+[Trello Board](https://trello.com/b/B81u95ds/blackjack)
+
+## _Technologies Used_
+
+#### \*Java Script
+
+#### \*HTML
+
+#### \*CSS
+
+### **ScreenShots**
+
+### **Credits**
