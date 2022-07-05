@@ -54,3 +54,15 @@ function createPlayersUI() {
     document.getElementById('players').appendChild(div_player)
   }
 }
+function startBlackjack() {
+  document.getElementById('btnStart').value = 'Restart'
+  document.getElementById('status').style.display = 'none'
+
+  currentPlayer = 0
+  getDeck()
+  shuffle()
+  createPlayers(2)
+  createPlayersUI()
+  dealHands()
+  document.getElementById('player_' + currentPlayer).classList.add('active')
+}
