@@ -66,3 +66,24 @@ function startBlackjack() {
   dealHands()
   document.getElementById('player_' + currentPlayer).classList.add('active')
 }
+function dealHands(){
+    for(ver i =0; i <2; i++){
+        for (var x = 0; x < players.length; x++){
+            var card = deck.pop();
+            players[x].Hand.push(card);
+            renderCard(card, x);
+            updatePoints();
+        }
+    }
+    updateDeck();
+}
+function renderCard(card, player){
+    var hand = document.getElementById('hand_' + player);
+    hand.appendChild(getCardUI(card));
+}
+fucntion getCardUI(card){
+    var el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = card.Suit + ' ' + card.Value;
+    return el;
+}
