@@ -87,3 +87,16 @@ fucntion getCardUI(card){
     el.innerHTML = card.Suit + ' ' + card.Value;
     return el;
 }
+var currentPlayer = 0;
+function hitMe(){
+    var card = deck.pop();
+    players[currentPlayer].Hand.push(card);
+    renderCard(card, currentPlayer);
+    updatePoints();
+    check();
+}
+function check(){
+    if(players[currentPlayer].Points > 21){
+        document.getElementById('status').innerHTML = 'Player: ' + players[currentPlayer].Id + ' Lost';
+    }
+}
