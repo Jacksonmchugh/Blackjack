@@ -67,7 +67,8 @@ function startBlackjack() {
   document.getElementById('player_' + currentPlayer).classList.add('active')
 }
 function dealHands(){
-    for(ver i =0; i <2; i++){
+    for (ver i = 0; i < 2; i++) 
+    {
         for (var x = 0; x < players.length; x++){
             var card = deck.pop();
             players[x].Hand.push(card);
@@ -81,7 +82,7 @@ function renderCard(card, player){
     var hand = document.getElementById('hand_' + player);
     hand.appendChild(getCardUI(card));
 }
-fucntion getCardUI(card){
+function getCardUI(card){
     var el = document.createElement('div');
     el.className = 'card';
     el.innerHTML = card.Suit + ' ' + card.Value;
@@ -99,4 +100,26 @@ function check(){
     if(players[currentPlayer].Points > 21){
         document.getElementById('status').innerHTML = 'Player: ' + players[currentPlayer].Id + ' Lost';
     }
+}
+function stay(){
+    if(currentPlayer != players.length-1){
+        document.getAnimations('player_' + currentPlayer).classList.remove('active');
+        currentPlayer += 1;
+        document.getElementById('player_' + currentPlayer).classList.add('active');
+    }
+    else {
+        end();
+    }
+}
+function end(){
+    var winner = -1;
+    var score = 0;
+    for (var i =0; i < players.length; i++)
+    {
+        if (players[i].Points > score && players[i] < 22){
+            winner = i;
+        }
+        score = players[i].Points;
+    }
+    document.getElementById('status').innerHTML = "You won " + players[winner].ID;
 }
