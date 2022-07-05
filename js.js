@@ -46,5 +46,11 @@ function createPlayersUI() {
     div_player.id = 'player_' + i
     div_player.className = 'player'
     div_hand.id = 'hand_' + i
+
+    div_playerid.innerHTML = players[i].ID
+    div_player.appendChild(div_playerid)
+    div_player.appendChild(div_hand)
+    div_player.appendChild(div_points)
+    document.getElementById('players').appendChild(div_player)
   }
 }
