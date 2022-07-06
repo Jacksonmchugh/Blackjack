@@ -1,0 +1,72 @@
+.game{
+    width: 500px;
+    border: 1px solid white;
+    background-color: green;
+    text-align: center;
+    height: 500px;
+}
+.btn{
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+h2{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.game-body{
+    padding: 20px;
+
+}
+.card{
+    width: 50px;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 8px;
+    text-align: center;
+    margin: 5px;
+    border: solid 2px;
+}
+.status{
+    display: inline-block;
+    background: blue;
+    border: 5px solid white;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: auto;
+}
+.players{
+    width: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    margin: 5%;
+    vertical-align: top;
+    background: white;
+}
+.player.active{
+    border: 2px solid black;
+}
+.points{
+    text-align: center;
+    font-size: 5px;
+    margin: 10px;
+}
+.deck{
+    background: white;
+    color:crimson;
+    padding: 5px;
+    border-radius: 5px;
+    border: 5px;
+    margin: 5px;
+}
+.btn{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
