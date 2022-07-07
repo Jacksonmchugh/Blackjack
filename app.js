@@ -17,6 +17,8 @@ let winner = document.getElementById('status')
 const player = 'Player1'
 const dealer = 'Dealer'
 let players = document.getElementById('player')
+let dCardHit = 0
+let pCardHit = 0
 
 start.addEventListener('click', async () => {
   const response = await axios.get(shuffle)
@@ -35,6 +37,7 @@ start.addEventListener('click', async () => {
   players.appendChild(pCard2)
   dealerHand.push(dCards.data.cards[0])
   dealerHand.push(dCards.data.cards[1])
+  console.log(dealerHand)
   // giving player hands value
   let pCardOne = playerHand[0].value
   if (pCardOne == 'JACK' || pCardOne == 'QUEEN' || pCardOne == 'KING') {
@@ -74,7 +77,9 @@ start.addEventListener('click', async () => {
 
   score = parseInt(pCardUno) + parseInt(pCardDos)
   dScore = parseInt(dCardUno) + parseInt(dCardDos)
+  console.log(dScore)
   // console.log(pCardUno)
+
   // console.log(pCardDos)
   // console.log(score)
   // console.log(playerHand)
@@ -107,8 +112,15 @@ hitMe.addEventListener('click', async () => {
 stand.addEventListener('click', async () => {
   if (dScore > 17) {
     dScore = dScore
+    const dCard1 = document.createElement('img')
+    dCard1.src = dealerHand[0].image
+    players.appendChild(dCard1)
+    const dCard2 = document.createElement('img')
+    dCard2.src = dealerHand[1].image
+    players.appendChild(dCard2)
   } else {
     const card = await axios.get(deck + deckId + drawOne)
+    console.log(dealerHand)
     dealerHand.push(card.data.cards[0])
     console.log(dealerHand)
     const dCard1 = document.createElement('img')
@@ -117,27 +129,13 @@ stand.addEventListener('click', async () => {
     const dCard2 = document.createElement('img')
     dCard2.src = dealerHand[1].image
     players.appendChild(dCard2)
-    dCard = dealerHand[0].value
-    if (dCard == 'JACK' || dCard == 'QUEEN' || dCard == 'KING') {
-      dCardHit = 10
-    } else if (dCard == 'ACE') {
-      dCardHit = 11
-    } else {
-      dCardHit = dCard
-    }
-    dScore = parseInt(dScore) + parseInt(dCardHit)
-  }
-  if (dScore > 17) {
-    dScore = dScore
-  } else {
-    const card = await axios.get(deck + deckId + drawOne)
-    dealerHand.push(card.data.cards[0])
-    console.log(dealerHand)
-    const dCard1 = document.createElement('img')
-    dCard1.src = dealerHand[2].image
-    players.appendChild(dCard1)
 
-    dCard = dealerHand[0].value
+    const dCard3 = document.createElement('img')
+    dCard3.src = dealerHand[2].image
+    players.appendChild(dCard3)
+
+    dCard = dealerHand[2].value
+    console.log(dCard)
     if (dCard == 'JACK' || dCard == 'QUEEN' || dCard == 'KING') {
       dCardHit = 10
     } else if (dCard == 'ACE') {
@@ -145,13 +143,36 @@ stand.addEventListener('click', async () => {
     } else {
       dCardHit = dCard
     }
+    console.log(dCardHit)
     dScore = parseInt(dScore) + parseInt(dCardHit)
-    if (dScore >= score) {
-      console.log('you lose')
-    } else {
-      console.log('you win')
-    }
   }
+  console.log(dScore, 'before')
+  // if (dScore > 17) {
+  //   dScore = dScore
+  // } else {
+  //   console.log('else')
+  //   const card = await axios.get(deck + deckId + drawOne)
+  //   dealerHand.push(card.data.cards[0])
+  //   console.log(dealerHand)
+  //   const dCard1 = document.createElement('img')
+  //   dCard1.src = dealerHand[2].image
+  //   players.appendChild(dCard1)
+  //   console.log(dCard1)
+  //   dCard = dealerHand[0].value
+  //   if (dCard == 'JACK' || dCard == 'QUEEN' || dCard == 'KING') {
+  //     dCardHit = 10
+  //   } else if (dCard == 'ACE') {
+  //     dCardHit = 11
+  //   } else {
+  //     dCardHit = dCard
+  //   }
+  //dScore = parseInt(dScore) + parseInt(dCardHit)
+  if (dScore >= score) {
+    console.log('you lose')
+  } else {
+    console.log('you win')
+  }
+  // }
   console.log(dScore, dealerHand)
   console.log(score)
 })
