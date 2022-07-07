@@ -122,17 +122,13 @@ stand.addEventListener('click', async () => {
     const card = await axios.get(deck + deckId + drawOne)
     console.log(dealerHand)
     dealerHand.push(card.data.cards[0])
-    console.log(dealerHand)
-    const dCard1 = document.createElement('img')
-    dCard1.src = dealerHand[0].image
-    players.appendChild(dCard1)
-    const dCard2 = document.createElement('img')
-    dCard2.src = dealerHand[1].image
-    players.appendChild(dCard2)
+    dealerHand.forEach((element, i) => {
+      const dCard3 = document.createElement('img')
+      dCard3.src = dealerHand[i].image
+      players.appendChild(dCard3)
+    })
 
-    const dCard3 = document.createElement('img')
-    dCard3.src = dealerHand[2].image
-    players.appendChild(dCard3)
+    console.log(dealerHand)
 
     dCard = dealerHand[2].value
     console.log(dCard)
