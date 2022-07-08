@@ -19,12 +19,17 @@
                 <input type="button" id="restartBtn" class="btn" value="deal">
                 <input type="button" id="hit" class="btn" value="hit">
                 <input type="button" id="stay" class="btn" value="stay">
+                <input type="button" id="newGame" class="newGame" value="New Game"
+                onclick="document.location.reload(true)">
             </div>
             <div class="status" id="status"></div>
             <div id="deck" class="deck">
-                <div id="deckcount">52</div>
+                
             </div>
-            <div id="player" class="players"></div>
+            <div id="player" class="players">
+                <div id="playercards">Player</div>
+                <div id="dealercards">Dealer</div>
+            </div>
             <div class="clear"></div>
         </div>    
         </div>

@@ -10,6 +10,12 @@
     padding: 10px 30px;
     border-radius: 10px;
 }
+.newGame{
+    padding: 10px 30px;
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+}
 h2{
     padding: 10px;
     background-color: black;
@@ -19,8 +25,24 @@ h2{
     padding: 20px;
 
 }
+.cards{
+    height: 100px;
+    align-items: left;
+    
+    border: 1px solid black;
+}
+.dealercards{
+    height: 100px;
+    align-items: baseline;
 
-.status{
+    
+}
+#player{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.scoreBoard{
     display: inline-block;
     background: blue;
     border: 5px solid white;
@@ -29,33 +51,14 @@ h2{
     margin: auto;
     display: none;
 }
-.players{
-    width: 10%;
-    height: 10%;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    padding: 10px;
-    display: flex;
-    margin: 5%;
-    
-    background: white;
-}
-.player.active{
-    border: 2px solid black;
-}
+
+
 .points{
     text-align: center;
     font-size: 5px;
     margin: 10px;
 }
-.deck{
-    background: white;
-    color:crimson;
-    padding: 5px;
-    border-radius: 5px;
-    border: 5px;
-    float: left;
-}
+
 .btn{
     background-color: black;
     color: white;
