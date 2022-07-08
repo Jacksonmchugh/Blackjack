@@ -27,3 +27,5 @@
 ### **ScreenShots**
 
 ### **Credits**
+
+        https://www.thatsoftwaredude.com/content/6417/how-to-code-blackjack-using-javascript

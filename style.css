@@ -28,7 +28,6 @@ h2{
 .cards{
     height: 100px;
     align-items: left;
-    
     border: 1px solid black;
 }
 .dealercards{
@@ -42,25 +41,12 @@ h2{
     display: flex;
     justify-content: space-between;
 }
-.scoreBoard{
-    display: inline-block;
-    background: blue;
-    border: 5px solid white;
-    border-radius: 10px;
-    padding: 5px 20px;
-    margin: auto;
-    display: none;
-}
-
-
-.points{
-    text-align: center;
-    font-size: 5px;
-    margin: 10px;
-}
 
 .btn{
     background-color: black;
     color: white;
     border-radius: 0px;
+}
+.player{
+    font-size: medium;
 }
