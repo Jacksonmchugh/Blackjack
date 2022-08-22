@@ -16,6 +16,8 @@
 
 [Trello Board](https://trello.com/b/B81u95ds/blackjack)
 
+![image](https://i.imgur.com/aHsvWEo.png)
+
 ## _Technologies Used_
 
 #### \*Java Script
