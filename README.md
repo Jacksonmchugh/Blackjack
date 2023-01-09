@@ -10,7 +10,7 @@
 
 #### Blackjack! Closest to 21 with out going over wins!
 
-#### A game against the computer. Press Draw to start the game. You will compete against the dealer. Draw cards and try to get to 21 with out going over. Win 5 hands to win the game. This game will be written in HTML, CSS, and JS.
+#### A game against the computer. Press Deal to start the hand. You will compete against the dealer. Draw cards and try to get to 21 with out going over. This game will be written in HTML, CSS, and JS.
 
 ## Trello Board
 

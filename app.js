@@ -50,7 +50,7 @@ start.addEventListener('click', async () => {
   if (pCardOne == 'JACK' || pCardOne == 'QUEEN' || pCardOne == 'KING') {
     pCardUno = 10
   } else if (pCardOne == 'ACE') {
-    pCardUno = 11
+    pCardUno = [1, 11]
   } else {
     pCardUno = pCardOne
   }
@@ -59,7 +59,7 @@ start.addEventListener('click', async () => {
   if (pCardTwo == 'JACK' || pCardTwo == 'QUEEN' || pCardTwo == 'KING') {
     pCardDos = 10
   } else if (pCardTwo == 'ACE') {
-    pCardDos = 11
+    pCardDos = [1, 11]
   } else {
     pCardDos = pCardTwo
   }
@@ -68,7 +68,7 @@ start.addEventListener('click', async () => {
   if (dCardOne == 'JACK' || dCardOne == 'QUEEN' || dCardOne == 'KING') {
     dCardUno = 10
   } else if (dCardOne == 'ACE') {
-    dCardUno = 11
+    dCardUno = [1, 11]
   } else {
     dCardUno = dCardOne
   }
@@ -77,7 +77,7 @@ start.addEventListener('click', async () => {
   if (dCardTwo == 'JACK' || dCardTwo == 'QUEEN' || dCardTwo == 'KING') {
     dCardDos = 10
   } else if (dCardTwo == 'ACE') {
-    dCardDos = 11
+    dCardDos = [1, 11]
   } else {
     dCardDos = dCardTwo
   }
