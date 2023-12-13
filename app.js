@@ -43,8 +43,17 @@ start.addEventListener('click', async () => {
   pCard2.src = cards.data.cards[1].image
   playerdiv.appendChild(pCard2)
   dealerHand.push(dCards.data.cards[0])
+  const dCard1 = document.createElement('img')
+  dCard1.classList.toggle('cards')
+  dCard1.src = dCards.data.cards[0].image
+  dealerdiv.appendChild(dCard1)
+  console.log(dCard1)
   dealerHand.push(dCards.data.cards[1])
-  console.log(dealerHand)
+  const dCard2 = document.createElement('img')
+  dCard2.classList.toggle('cards')
+  dCard1.src = dCards.data.cards[1].image
+  dealerdiv.appendChild(dCard2)
+  console.log(dCard2)
   // giving player hands value
   let pCardOne = playerHand[0].value
   if (pCardOne == 'JACK' || pCardOne == 'QUEEN' || pCardOne == 'KING') {
@@ -120,8 +129,10 @@ hitMe.addEventListener('click', async () => {
       alert('BlackJack! You win!')
     }
   }
-  console.log(score)
+
   console.log(pCard)
+  console.log(score)
+
   console.log(playerHand)
 })
 
